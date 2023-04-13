@@ -13,7 +13,13 @@ else
    		echo "Nazwa pliku: log$i.txt, Nazwa skryptu: skrypt.sh, Data: $(date)" > log$i.txt
 	  done
 	else
-	  echo "Nieprwidłowa flaga";
+	  if [ "$1" = "--help" ]; then
+  	    echo "--date: wyświetla date"
+		echo "--log100: tworzy 100 plikow log txt"
+		echo "--log30: tworzy 30 plików log txt"
+	  else
+	    echo "Nieprwidłowa flaga";
+	  fi
 	fi
   fi
 fi
